@@ -40,7 +40,7 @@
         })
         .then(response => response.text())
         .then(data => {
-            alert(data);
+            showAlert(data);
             document.getElementById("quoteForm10").reset(); // Reset the form after submission
         })
         .catch(error => {
@@ -48,6 +48,21 @@
         });
     }
 });
+
+
+function showAlert(message) {
+    const alertElement = document.getElementById("alertMessage");
+    alertElement.textContent = message;
+    alertElement.classList.remove("hidden");
+    alertElement.classList.add("visible");
+
+    // Automatically hide the alert after 3 seconds
+    setTimeout(() => {
+        alertElement.classList.remove("visible");
+        alertElement.classList.add("hidden");
+    }, 3000);
+}
+
    // Back to top button
 let calcScrollValue = () => {
     let scrollProgress = document.getElementById("progress");

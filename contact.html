@@ -43,13 +43,12 @@
                 <div class="row v-center">
                     <div class="header-item item-left">
                         <div class="logo">
-                            <a href="#"><img src="img/G Logos.png" alt=""></a>
+                            <a href="#"><img src="img/G Logos.png" height="80px" width="150px" alt=""></a>
                         </div>
                     </div>
                     <!-- menu start here -->
                     <div class="header-item item-center">
-                        <div class="menu-overlay">
-                        </div>
+                        <div class="menu-overlay"></div>
                         <nav class="menu">
                             <div class="mobile-menu-head">
                                 <div class="go-back"><i class="fa fa-angle-left"></i></div>
@@ -57,59 +56,48 @@
                                 <div class="mobile-menu-close">&times;</div>
                             </div>
                             <ul class="menu-main">
-                               <li>
-                                   <a href="index.html">Home</a>
-                               </li>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">About Us</a></li>
                                 <li class="menu-item-has-children">
-                                   <a href="about.html">About Us</a>
-                               </li>
-                                <li class="menu-item-has-children">
-                                    <a href="#">Services <i class="fa fa-angle-down"></i></a>
+                                    <a href="hh.html">Services </a><i class="fa fa-angle-down icon"></i>
                                     <div class="sub-menu mega-menu mega-menu-column-4">
-                                      <div class="list-item">
-                                            <h4 class="title">BRANDNING</h4>
+                                        <div class="list-item">
+                                            <h4 class="title">BRANDING</h4>
                                             <ul>
-                                                 <li><a href="graphic designing.html">GRAPHIC-DESIGNING</a></li>
+                                                <li><a href="#">GRAPHIC DESIGN</a></li>
                                             </ul>
+                                        </div>
+                                        <div class="list-item">
+                                            <h4 class="title">STRATEGY</h4>
+                                            <ul>
+                                                <li><a href="#">SMM</a></li>
+                                                <li><a href="#">SEO</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="list-item">
+                                            <h4 class="title">WEBSITE</h4>
+                                            <ul>
+                                                <li><a href="#">WEB-DEVELOPMENT</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="list-item">
                                             <h4 class="title">MARKETING</h4>
                                             <ul>
-                                                 <li><a href="contentmarketing.html">CONTENT-WRITING</a></li>
-                                                 <li><a href="ppc.html">PPC</a></li>
+                                                <li><a href="#">CONTENT-MARKETING</a></li>
+                                                <li><a href="#">PPC</a></li>
                                             </ul>
-                                      </div>
-                                      <div class="list-item">
-                                          <h4 class="title">STRATEGY</h4>
-                                          <ul>
-                                                 <li><a href="smm.html">SMM</a></li>
-                                                 <li><a href="seo.html">SEO</a></li>
-                                            </ul>
-                                            <h4 class="title">WEBSITE</h4>
-                                          <ul>
-                                                 <li><a href="web development.html">WEB-DEVELOPMENT</a></li>
-                                            </ul>
-                                      </div>
-                                      <div class="list-item">
-                                          <h4 class="title">Portfolio</h4>
-                                          <ul>
-                                                 <li><a href="#">Gallery</a></li>
-                                            </ul>
-                                      </div>
-                                      <div class="list-item">
-                                           <img src="img/shop1.jpg" alt="shop">
-                                      </div>
+                                        </div>
                                     </div>
                                 </li>
                                 <li class="menu-item-has-children">
-                                   <a href="#">Portfolio<i class="fas fa-angle-down"></i></a>
-                                   <div class="sub-menu single-column-menu">
-                                       <ul>
-                                           <li><a href="#">Gallery</a></li>
-                                       </ul>
-                                   </div>
-                               </li>
-                                <li>
-                                    <a href="contact.html">Contact</a>
+                                    <a href="#">Gallery <i class="fas fa-angle-down"></i></a>
+                                    <div class="sub-menu single-column-menu">
+                                        <ul>
+                                            <li><a href="#">Portfolio</a></li>
+                                        </ul>
+                                    </div>
                                 </li>
+                                <li><a href="#">Contact</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -224,35 +212,36 @@
         <div class="row g-0 justify-content-center">
             <div class="col-lg-8 fadeInUp wow" data-wow-delay="0.5s">
                 <p class="text-center mb-4">We appreciate your business and guarantee a response within 24 Business hours which would include our Packages and Pricing.</p>
-                <div class="row g-3">
-                    <div class="col-md-6">
-                        <div class="form-floating">
-                            <input type="text" class="form-control" id="name" placeholder="Your Name">
-                            <label for="name">Your Name</label>
+                <form id="contactForm">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                                <label for="name">Your Name</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="email" class="form-control" id="email" placeholder="Your Email" required>
+                                <label for="email">Your Email</label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="subject" placeholder="Subject" required>
+                                <label for="subject">Subject</label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-floating">
+                                <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 200px" required></textarea>
+                                <label for="message">Message</label>
+                            </div>
+                        </div>
+                        <div class="col-12 text-center">
+                            <button class="rounded-pill py-3 px-5 button2" type="submit">Send Message</button>
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <div class="form-floating">
-                            <input type="email" class="form-control" id="email" placeholder="Your Email">
-                            <label for="email">Your Email</label>
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <div class="form-floating">
-                            <input type="text" class="form-control" id="subject" placeholder="Subject">
-                            <label for="subject">Subject</label>
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <div class="form-floating">
-                            <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 200px"></textarea>
-                            <label for="message">Message</label>
-                        </div>
-                    </div>
-                    <div class="col-12 text-center">
-                        <button class=" rounded-pill py-3 px-5 button2" type="submit">Send Message</button>
-                    </div>
-                </div>
             </form>
             </div>
         </div>
@@ -273,10 +262,10 @@
                 <div class="g-5 row">
                     <div class="col-md-6 col-lg-3">
                         <h5 class="text-light mb-4">Address</h5>
-                        <p class="mb-2 text-light"><i class="me-3 fa fa-map-marker-alt"></i>306, 3rd Floor, MayFair Gardens, Banjara
-                            Hills, Road No. : 12, Hyderabad, Telangana 500034</p>
+                        <p class="mb-2 text-light"><i class="me-3 fa fa-map-marker-alt"></i>306, 3rd Floor, MayFair Gardens, Road No. : 12, Banjara
+                            Hills, Hyderabad, Telangana 500034</p>
                         <p class="mb-2 text-light"><i class="me-3 fa fa-phone-alt">&nbsp;Phone</i>
-                        <h6 class="text-light">Assistance hours: Monday – Friday, 9 am to 6 pm</h6><h6 class="text-light">040-35167744</h6></p>
+                        <h6 class="text-light">Assistance hours: Monday – Saturday, 10 am to 6 pm</h6><h6 class="text-light">91+ 9154 944 876</h6></p>
                         <p class="mb-2 text-light"><i class="fa fa-envelope">&nbsp;Email</i>
                         <h6 class="text-light">Gradiente@gmail.com</h6>
                         </p>
@@ -345,7 +334,7 @@
         </div>
         <!-- footer end -->
 <!-- pop up start  -->
-        <div id="popupWindow" class="popup">
+        <!-- <div id="popupWindow" class="popup">
             <div class="popup-content">
                 <span id="close" class="close">&times;</span>
                 <h2>Welcome!</h2>
@@ -358,7 +347,7 @@
                 </form>
                 <button id="okButton" class="btn-wrappers" style="display:none;">OK</button> 
             </div>
-        </div> 
+        </div>  -->
         <!-- pop up end -->
      <!-- Back to Top -->
     <!-- <a href="#" class="btn btn-lg btn-warning btn-lg-square rounded-circle back-to-top"><i
@@ -402,6 +391,7 @@
     <script src="lib/lightbox/js/lightbox.min.js"></script>
 
     <!-- Template Javascript -->
+    <script src="js/contact.js"></script>
     <script src="js/contact.js"></script>
 </body>
 

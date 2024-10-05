@@ -84,7 +84,7 @@ document.getElementById("quoteForm9").addEventListener("submit", function(event)
       })
       .then(response => response.text())
       .then(data => {
-          alert(data);
+        showAlert(data);
           document.getElementById("quoteForm9").reset(); // Reset the form after submission
       })
       .catch(error => {
@@ -93,6 +93,20 @@ document.getElementById("quoteForm9").addEventListener("submit", function(event)
   }
 });
  
+
+function showAlert(message) {
+    const alertElement = document.getElementById("alertMessage");
+    alertElement.textContent = message;
+    alertElement.classList.remove("hidden");
+    alertElement.classList.add("visible");
+
+    // Automatically hide the alert after 3 seconds
+    setTimeout(() => {
+        alertElement.classList.remove("visible");
+        alertElement.classList.add("hidden");
+    }, 3000);
+}
+
     // Back to top button
   
 let calcScrollValue = () => {

@@ -103,3 +103,39 @@ document.addEventListener("DOMContentLoaded", function () {
       
       window.onscroll = calcScrollValue;
       window.onload = calcScrollValue;
+
+
+    //   contact form
+    document.getElementById('contactForm').addEventListener('submit', async function(e) {
+        e.preventDefault();
+    
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const subject = document.getElementById('subject').value.trim();
+        const message = document.getElementById('message').value.trim();
+    
+        // Basic validation
+        if (!name || !email || !subject || !message) {
+            alert("Please fill out all fields.");
+            return;
+        }
+    
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(email)) {
+            alert("Please enter a valid email address.");
+            return;
+        }
+    
+        // Send data to the server if validation is successful
+        const response = await fetch('http://localhost:5000/contact', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ name, email, subject, message })
+        });
+    
+        const data = await response.json();
+        alert(data.message);
+    });
+    

@@ -67,30 +67,30 @@
   
   /* end */
   /* .navbar 2 */
-  :before,:after{
-  box-sizing: border-box;
-  }
-  .container{
-  max-width: 1200px;
-  margin:auto;
-  }
-  .row{
-  display: flex;
-  flex-wrap: wrap;
-  }
-  .v-center{
-  align-items: center;
-  }
-  ul{
-  list-style: none;
-  margin:0;
-  padding:0;
-  }
-  a{
-  text-decoration: none;
-  }
-  /* header */
-  /* header */
+  
+:before,:after{
+	box-sizing: border-box;
+}
+.container{
+	max-width: 1200px;
+	margin:auto;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+.v-center{
+	align-items: center;
+}
+ul{
+	list-style: none;
+	margin:0;
+	padding:0;
+}
+a{
+	text-decoration: none;
+}
+/* header */
 .header{
 	display: block;
 	width: 100%;
@@ -131,7 +131,7 @@
 .header .menu > ul > li > a{
 	font-size: 15px;
 	font-weight: 500;
-	color:#ffffff;
+	color:#000000;
 	position: relative;
 	text-transform: capitalize;
 	transition: color 0.3s ease;
@@ -188,7 +188,7 @@
 
 .header .menu > ul > li .sub-menu.mega-menu-column-4{
   max-width: 1100px;
-  width: 100%; 	
+  width: 52%; 	
   display: flex;
   flex-wrap: wrap;
   padding:20px 15px;
@@ -199,7 +199,7 @@
 }
 .header .menu > ul > li .sub-menu.mega-menu-column-4 > .list-item .title{
 	font-size: 16px;
-	color:#977834;
+	color:#ea4636;
 	font-weight: 500;
 	line-height: 1;
 	padding:10px 0;
@@ -217,7 +217,7 @@
 .header .menu > ul > li .sub-menu > ul > li > a:hover,
 .header .item-right a:hover,
 .header .menu > ul > li:hover > a{
-	color:#977834;
+	color:#ea4636;
 }
 /* banner section */
 .banner-section{
@@ -233,9 +233,8 @@
 	display: none;
 }
 
-/*responsive*/
-@media(max-width: 991px){
 
+@media(max-width: 991px){
 	.header .item-center{
 		order:3;
 		flex:0 0 100%;
@@ -308,7 +307,6 @@
 		padding:0 50px 0 15px;
 		display: block;
 		border-bottom: 1px solid rgba(0,0,0,0.1);
-        color: #000000;
 	}
 	.header .menu > ul > li > a i{
 		position: absolute;
@@ -319,6 +317,13 @@
 		text-align: center;
 		line-height: 50px;
 		transform: rotate(-90deg);
+	}
+	.icon{
+		position: absolute;
+		margin-left: 290px;
+		margin-top: -33px;
+		transform: rotate(-90deg);
+
 	}
 	.header .menu .mobile-menu-head{
 		display: flex;
@@ -444,6 +449,41 @@
 	  visibility: visible;
 	  opacity:1;	
 	}
+}
+
+
+
+
+
+
+/* Add this CSS to your existing styles */
+
+.header .menu > ul > li .sub-menu {
+    border-radius: 20px; /* Rounded corners for submenus */
+}
+
+.header .menu > ul > li .sub-menu.mega-menu {
+    border-radius: 20px; /* Rounded corners for mega menus */
+}
+
+.header .menu > ul > li .sub-menu.mega-menu > .list-item {
+    border-radius: 20px; /* Rounded corners for individual list items */
+    overflow: hidden; /* Prevent overflow on corners */
+}
+
+.header .menu > ul > li .sub-menu.mega-menu > .list-item img {
+    border-radius: 20px; /* Rounded corners for images */
+}
+
+/* Optional: Add border radius for buttons or links in the header */
+.header .item-right a {
+    border-radius: 20px; /* Rounded corners for icons in the header */
+    padding: 8px; /* Add padding for better touch area */
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+.header .item-right a:hover {
+    background-color: #f0f0f0; /* Background change on hover */
 }
 
 
@@ -765,7 +805,7 @@ padding-top: 0px;
 }
 
 .testimonial-carousel .owl-item.center .testimonial-item {
-  background: #977834  !important;
+	background: linear-gradient(to right ,rgb(126, 111, 46),rgba(164, 168, 72, 0.356));
 }
 
 .testimonial-carousel .owl-item.center .testimonial-item * {
@@ -899,7 +939,7 @@ color: var(--primary);
   @media (max-width: 600px) {
     .redes {
       width: 60px; /* Adjust width for smaller screens */
-      margin-left: 180px;
+      margin-left: 0px;
     }
   
     .redes a {
@@ -1226,4 +1266,34 @@ color: var(--primary);
 	}
 }
 
+/* end */
+/* pop up submit form */
+.alert {
+    position: fixed;
+    top: 200px;
+    left: 40%;
+    transform: translateX(-50%);
+    padding: 15px;
+    background-color: #a0af4c; /* Change color as needed */
+    color: white;
+    border-radius: 5px;
+    z-index: 1000;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+@media (max-width: 567px) {
+    .alert {
+        top: 200px;
+        margin-left: -140px;
+    }
+}
 /* end */

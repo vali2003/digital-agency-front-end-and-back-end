@@ -123,14 +123,26 @@ document.getElementById("quoteForm").addEventListener("submit", function(event) 
       })
       .then(response => response.text())
       .then(data => {
-          alert(data);
-          document.getElementById("quoteForm").reset();
+        showAlert(data);
+        document.getElementById("quoteForm").reset();
       })
       .catch(error => {
           console.error('Error:', error);
       });
   }
 });
+function showAlert(message) {
+    const alertElement = document.getElementById("alertMessage");
+    alertElement.textContent = message;
+    alertElement.classList.remove("hidden");
+    alertElement.classList.add("visible");
+
+    // Automatically hide the alert after 3 seconds
+    setTimeout(() => {
+        alertElement.classList.remove("visible");
+        alertElement.classList.add("hidden");
+    }, 3000);
+}
 
 // Validation for Form 2
 document.getElementById("quoteForm2").addEventListener("submit", function(event) {
@@ -175,7 +187,7 @@ document.getElementById("quoteForm2").addEventListener("submit", function(event)
       })
       .then(response => response.text())
       .then(data => {
-          alert(data);
+        showAlert(data);
           document.getElementById("quoteForm2").reset(); // Reset the form after submission
       })
       .catch(error => {
@@ -230,7 +242,7 @@ document.getElementById("quoteForm3").addEventListener("submit", function(event)
       })
       .then(response => response.text())
       .then(data => {
-          alert(data);
+        showAlert(data);
           document.getElementById("quoteForm3").reset(); // Reset the form after submission
       })
       .catch(error => {
